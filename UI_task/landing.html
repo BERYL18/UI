@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="landing.css" type="text/css" />
+
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="back">
+      <div class="main">
+        <div class="landing" id="landing">
+          <div class="navbar">
+            <div class="logo">
+              <img src="./images/logo.jpeg" alt="logo" />
+            </div>
+            <div class="userprofile">
+              <img src="./images/user.jpg" alt="user" class="user" />
+            </div>
+          </div>
+
+          <div class="cusbil">
+            <button class="bill" onclick="openfacturier()">
+              Biller
+              <div class="notification">3</div>
+            </button>
+            <button class="cust" onclick="openfacturier2()">
+              Customer
+              <div class="notification">2</div>
+            </button>
+          </div>
+
+          <div class="text">
+            <h4>You can now get to your customers online</h4>
+          </div>
+        </div>
+
+        <div class="biller" id="biller">
+          <div class="leftbox">
+            <div class="navbar">
+              <div class="username">
+                <div class="userprofile">
+                  <img src="./images/user.jpg" class="user" />
+                </div>
+                <div class="userProfName">
+                  <h4>Anna</h4>
+                </div>
+              </div>
+              <button class="custo" onclick="openfacturier2()">
+                Customer
+                <div class="notifications">2</div>
+              </button>
+            </div>
+            <div class="search">
+              <div>
+                <input type="text" placeholder="search or start new chat" />
+                <img src="./images/icons/search.png" alt="search" />
+              </div>
+            </div>
+            <div id="chatList" class="chatlist"></div>
+          </div>
+
+          <div class="rightbox">
+            <div id="imgHolder" class="imgHolder">
+              <img src="./images/whatsaap.jpg" alt="cover" />
+              <h4>Company name</h4>
+              <p>You can now get to your customers online</p>
+            </div>
+
+            <div class="navbar">
+              <div class="userprofile">
+                <img
+                  id="selectedProfPic"
+                  src="./images/img1.jpg"
+                  class="user"
+                />
+              </div>
+
+              <div>
+                <h4 id="selectedUser">Claude</h4>
+                <p id="isOnline">online</p>
+              </div>
+              <div class="searchright" id="searchright">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="search a particular message"
+                  />
+                  <img
+                    src="./images/icons/close.png"
+                    alt="cancel"
+                    id="close"
+                    onclick="openfacturier4()"
+                  />
+                </div>
+              </div>
+
+              <div class="nav_icon" id="nav_icon">
+                <div>
+                  <img
+                    src="./images/icons/search.png"
+                    alt="search"
+                    onclick="openfacturier3()"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="./images/icons/dots.png"
+                    alt="menu"
+                    id="menu"
+                    onclick="openfacturier5()"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="menudrop" id="menudrop">
+              <img
+                src="./images/icons/back.png"
+                alt="back"
+                id="back"
+                onclick="openfacturier6()"
+              />
+              <p>Delete chat</p>
+              <p>Select chat</p>
+              <p>Select chat</p>
+              <p>Select chat</p>
+              <p>Select chat</p>
+            </div>
+
+            <div id="chatBox" class="chatBox"></div>
+            <div class="keyboard">
+              <div><input type="text" id="send-msg" placeholder="Type a message" /></div>
+              <div><img src="./images/icons/send.png" onclick="addMessage(event)" alt="send" /></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="landing.js"></script>
+  </body>
+</html>
