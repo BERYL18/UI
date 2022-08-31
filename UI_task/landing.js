@@ -284,6 +284,9 @@ function generateChatHTML({ id, img, name, time, lasTText, unRead }) {
   return chatDiv;
 }
 
+
+
+
 const scrollToBottom = (id) => {
   const element = document.getElementById(id);
   element.scroll({ top: element.scrollHeight, behavior: "smooth" });
